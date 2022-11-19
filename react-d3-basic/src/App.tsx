@@ -1,5 +1,6 @@
 import { Container, Box, Typography, styled } from '@mui/material'
 import BarChart from './components/BarChart'
+import LineChart from './components/LineChart'
 
 const RootBox = styled(Box)({
   width: '100vw',
@@ -15,6 +16,7 @@ function App() {
       <Container maxWidth="sm">
         <Typography variant="h1">Header</Typography>
         <BarChart />
+        <LineChart />
       </Container>
     </RootBox>
   )
