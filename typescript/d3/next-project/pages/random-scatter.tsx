@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Container, Box, Button } from '@mui/material'
-import Experiment from '../src/components/Experiment'
+import { Container, Stack, Button } from '@mui/material'
+import BasicScatter from '../src/components/BasicScatter'
 import { ScatterDataType } from '../src/types/types'
 
 export default () => {
@@ -20,10 +20,16 @@ export default () => {
 
   return (
     <Container>
-      <Box>
-        <Button onClick={(_) => setData(randomData(100, [0, 100], [0, 100]))}>Random</Button>
-        <Experiment data={data} />
-      </Box>
+      <Stack>
+        <Button
+          variant="outlined"
+          sx={{ mb: 2 }}
+          onClick={(_) => setData(randomData(100, [0, 100], [0, 100]))}
+        >
+          Random
+        </Button>
+        <BasicScatter data={data} />
+      </Stack>
     </Container>
   )
 }
